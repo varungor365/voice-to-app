@@ -1,9 +1,11 @@
 import argparse
-import sys
 import os
+import sys
+
 from rich.console import Console
 from rich.markdown import Markdown
-from voice2app.generator import transcribe_audio, generate_app_structure
+
+from voice2app.generator import generate_app_structure, transcribe_audio
 
 console = Console()
 
@@ -40,7 +42,7 @@ def main():
                 f.write(content)
             console.print(f"[bold green]✅ Saved code to: {filepath}[/bold green]")
             
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         console.print(f"[bold red]Error:[/bold red] {e}")
         sys.exit(1)
 

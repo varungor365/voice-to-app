@@ -1,8 +1,9 @@
-import openai
-import litellm
-import os
 import json
-from typing import Dict, Any, Tuple
+import os
+
+import litellm
+import openai
+
 
 def transcribe_audio(audio_path: str) -> str:
     """Transcribes an audio file using OpenAI Whisper API."""
@@ -19,7 +20,7 @@ def transcribe_audio(audio_path: str) -> str:
         
     return transcript.text
 
-def generate_app_structure(transcript: str, model: str = "gpt-4o-mini") -> Tuple[str, Dict[str, str]]:
+def generate_app_structure(transcript: str, model: str = "gpt-4o-mini") -> tuple[str, dict[str, str]]:
     """Generates application code from a stream-of-consciousness transcript."""
     
     system_prompt = """You are an expert AI Developer. 
@@ -52,5 +53,5 @@ You must respond with a JSON object containing:
         code = parsed.get("code", "")
         
         return description, {filename: code}
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         raise ValueError(f"Failed to parse LLM response: {e}")

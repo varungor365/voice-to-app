@@ -1,7 +1,8 @@
-import pytest
-from unittest.mock import patch, MagicMock
-from voice2app.generator import generate_app_structure
 import json
+from unittest.mock import MagicMock, patch
+
+from voice2app.generator import generate_app_structure
+
 
 @patch("voice2app.generator.litellm.completion")
 def test_generate_app_structure(mock_completion):
