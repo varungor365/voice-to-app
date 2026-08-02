@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_generator.py
+voice2app/__init__.py
+voice2app/cli.py
+voice2app/generator.py
+voice_to_app.egg-info/PKG-INFO
+voice_to_app.egg-info/SOURCES.txt
+voice_to_app.egg-info/dependency_links.txt
+voice_to_app.egg-info/entry_points.txt
+voice_to_app.egg-info/requires.txt
+voice_to_app.egg-info/top_level.txt
