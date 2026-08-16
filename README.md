@@ -68,3 +68,7 @@ See [CLAUDE.md](CLAUDE.md) for contribution guidelines.
 ## 📄 License
 
 MIT © Varun Ruhella. See [LICENSE](LICENSE) for details.
+
+## Why star this repository
+
+Star Voice-to-App if voice-driven prototyping, transcription-to-code workflows, or safe local generation of application prototypes is useful in your developer workflow.
