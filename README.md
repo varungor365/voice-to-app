@@ -27,6 +27,12 @@ Have a great idea for a web app while on a walk? Record a voice memo of you ramb
 
 ---
 
+## Security and output safety
+
+Voice-to-App sends audio to the configured transcription provider and sends the resulting transcript to the selected LLM provider. Keep API keys in environment variables, review generated code before running it, and avoid placing sensitive recordings or transcripts in shared directories.
+
+Generated filenames are restricted to a single path component before writing to the requested output directory. The project is a developer-tool prototype, not an autonomous deployment system; generated applications should be treated as untrusted code until reviewed.
+
 ## 🚀 Quickstart
 
 ### Install
